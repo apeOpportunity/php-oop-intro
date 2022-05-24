@@ -10,7 +10,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/main.js"></script>
     </head>
-    <img src="images/babyYoda.gif" alt="cute baby yoda animation" style="width:400px" class="center">
+    <body>
+        <pre>
+            <img src="images/babyYoda.gif" alt="cute baby yoda animation" style="width:400px" class="center">
 <?php 
 /*
     class Fruit {
@@ -121,6 +123,8 @@
 
 require_once('Fruit.php');
 require_once('Dog.php');
+
+echo '<pre>';
 /*
 $banana = new Fruit('Banana', 'Yellow');
 
@@ -181,7 +185,8 @@ $apple->set_name('Apple');
 
 
 
-    echo '<pre/>';
+
+
     //$mammal = new Mammal('red',3); 
     //var_dump($mammal);
 //    exit(); 
@@ -201,12 +206,20 @@ $apple->set_name('Apple');
 
 
 
+
+
+
+
+
+
     $dog = new Dog('brown', 7, 'Dog'); 
+
+    echo '<br><br>'; 
     //$dog = new Dog('brown', 'string', 'Dog');     
-    var_dump($dog);
+    var_dump($dog); 
     $dog->bark(); 
     $dog->eat(); 
-    //exit(); 
+    exit(); 
 
 
 
@@ -228,7 +241,7 @@ $apple->set_name('Apple');
     //$mammal->bark(); 
     ///$dog->bark(); 
 
-    exit(); 
+
 
 
     echo '<br>';
@@ -245,5 +258,6 @@ $apple->set_name('Apple');
     //exit();                         
          
 ?>
+        </pre>
     </body>
 </html>
