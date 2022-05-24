@@ -1,3 +1,7 @@
+# Purpose
+
+This repo holds the solution for a simple PHP OOP Intro.
+
 # Docker for local web development: a basic LEMP stack (Linux, Nginx, MySQL, PHP)
 
 ## Content
@@ -20,22 +24,22 @@ This setup also uses localhost's port 8000 for Nginx, so make sure it is availab
 Clone the repository and change the current directory for the project's root:
 
 ```
-$ git clone https://github.com/opportunity-zh/opp-php-mysql.git
+$ git clone https://github.com/opportunity-zh/php-oop-intro.git
 
-$ cd opp-php-mysql
+$ cd php-oop-intro
 ```
 
 Run the following command:
 
 ```
-$ docker-compose up -d
+$ docker compose up -d
 ```
 
 This may take a little bit of time, as some Docker images might need downloading.
 
 ## Explanation
 
-The images used by the setup are listed and configured in [`docker-compose.yml`](https://github.com/opportunity-zh/opp-php-mysql/docker-compose.yml).
+The images used by the setup are listed and configured in [`docker-compose.yml`](https://github.com/opportunity-zh/php-oop-intro/docker-compose.yml).
 
 When building and starting the containers based on the images for the first time, a MySQL database named `library` is automatically created (you can pick a different name for the MYSQL_DATABASE in the MySQL service's description in `docker-compose.yml`).
 
@@ -46,23 +50,23 @@ The database data is persisted in its own local directory through the volume `db
 To stop the containers:
 
 ```
-$ docker-compose stop
+$ docker compose stop
 ```
 
 To destroy the containers:
 
 ```
-$ docker-compose down
+$ docker compose down
 ```
 
 To destroy the containers and the associated volumes:
 
 ```
-$ docker-compose down -v
+$ docker compose down -v
 ```
 
 To remove everything, including images and orphan containers:
 
 ```
-$ docker-compose down -v --rmi all --remove-orphans
+$ docker compose down -v --rmi all --remove-orphans
 ```
