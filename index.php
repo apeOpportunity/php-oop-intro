@@ -121,11 +121,11 @@
     
     }*/
 
-require_once('Fruit.php');
-require_once('Dog.php');
 
-echo '<pre>';
 /*
+
+
+  require_once('Fruit.php');
 $banana = new Fruit('Banana', 'Yellow');
 
 echo '<pre>'; 
@@ -208,8 +208,12 @@ $apple->set_name('Apple');
 
 
 
+    require('Fruit.php');
+    require_once('Dog.php');
 
-
+    //some more code....
+    require_once('Dog.php');
+    
 
 
     $dog = new Dog('brown', 7, 'Dog'); 
@@ -217,8 +221,8 @@ $apple->set_name('Apple');
     echo '<br><br>'; 
     //$dog = new Dog('brown', 'string', 'Dog');     
     var_dump($dog); 
-    $dog->bark(); 
-    $dog->eat(); 
+    //$dog->bark(); 
+    //$dog->eat(); 
     exit(); 
 
 

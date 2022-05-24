@@ -10,7 +10,7 @@ class Mammal
   // mammal object
   // will also be called be a child class, if the child class has no constructor
   function __construct(string $color, int $age, string $name = 'Mammal' ) {
-    //echo 'constructor of Mammal<br>'; 
+    echo 'constructor of Mammal<br>'; 
     $this->color = $color; 
     $this->age = $age; 
     $this->name = $name;     
