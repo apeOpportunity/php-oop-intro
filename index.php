@@ -12,7 +12,7 @@
     </head>
     <img src="images/babyYoda.gif" alt="cute baby yoda animation" style="width:400px" class="center">
 <?php 
-
+/*
     class Fruit {
 
         protected string $color;
@@ -117,9 +117,10 @@
             echo 'woof woof!';
         }
     
-    }
+    }*/
 
-//require_once('Fruit.php');
+require_once('Fruit.php');
+require_once('Dog.php');
 /*
 $banana = new Fruit('Banana', 'Yellow');
 
@@ -201,6 +202,7 @@ $apple->set_name('Apple');
 
 
     $dog = new Dog('brown', 7, 'Dog'); 
+    //$dog = new Dog('brown', 'string', 'Dog');     
     var_dump($dog);
     $dog->bark(); 
     $dog->eat(); 

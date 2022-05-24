@@ -9,6 +9,7 @@ class Mammal
   // constructor which is used when you create a new 
   // mammal object
   function __construct(string $color, int $age, string $name ) {
+    echo 'constructor of Mammal'; 
     $this->color = $color; 
     $this->age = $age; 
     $this->name = $name;     
