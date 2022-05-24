@@ -6,12 +6,15 @@ class Mammal
   protected int $age;       
   protected string $name;
  
-  function __construct(string $color, int $age, string $name = 'Mammal') {
+  // constructor which is used when you create a new 
+  // mammal object
+  function __construct(string $color, int $age, string $name ) {
     $this->color = $color; 
     $this->age = $age; 
     $this->name = $name;     
   }
 
+  // getter methods
   function get_color() {      
     return $this->color;
   }
@@ -24,21 +27,23 @@ class Mammal
     return $this->name;
   }  
 
-  function set_color($color)  
+  // setter methods
+  function set_color(string $color)  
   { 
-    $this->color = (string)$color; 
+    $this->color = $color; 
   }
 
-  function set_age($age) 
+  function set_age(int $age) 
   {    
-    $this->age = (int)$age;
+    $this->age = $age;
   }
 
-  function set_name($name) 
+  function set_name(string $name) 
   {    
-    $this->name = (int)$name;
+    $this->name = $name;
   }
 
+  // more mammal functions
   function eat() 
   {
     echo 'Yum :o)'; 

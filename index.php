@@ -10,89 +10,103 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/main.js"></script>
     </head>
-        <img src="images/babyYodaMagic.gif" alt="cute baby yoda animation" style="width:400px" class="center">
+    <img src="images/babyYoda.gif" alt="cute baby yoda animation" style="width:400px" class="center">
 <?php 
-
 
     class Fruit {
 
         protected string $color;
         protected string $name;   
-
+        protected int $amount; 
+        
+    
         // constructur
         function __construct(string $color, string $name = 'Fruit') {
             $this->color = $color;     
             $this->name = $name; 
         }
         
-        // getter and setter methods 
-        // have default access modifiere: public function 
-        function set_name($name) {
+        // getter and setter methods for name
+        function set_name(string $name) {
             $this->name = $name;
         }
-
+    
         function get_name() {
             return $this->name;
         }    
-
-        function set_color($color) {
+    
+        // getter and setter methods for color
+        function set_color(string $color) {
             $this->color = $color;
         }
-
+    
         function get_color() {
             return $this->color;
+        }        
+    
+        // getter and setter methods for amount
+        function set_amount(int $amount) {
+            $this->amount = $amount;
+        }
+    
+        function get_amount() {
+            return $this->amount;
         }        
     }
 
 
-
     class Mammal
     {
-        protected string $color;        
-        protected int $age;           
+        protected string $color;  
+        protected int $age;       
         protected string $name;
-        
-        public function __construct(string $color, int $age, string $name = 'Mammal') {
-            $this->color = $color; 
-            $this->age = $age; 
-            $this->name = $name;     
+       
+        // constructor which is used when you create a new 
+        // mammal object
+        function __construct(string $color, int $age, string $name ) {
+          $this->color = $color; 
+          $this->age = $age; 
+          $this->name = $name;     
         }
-
-        function get_color() {       
-            return $this->color;
+      
+        // getter methods
+        function get_color() {      
+          return $this->color;
         }
-
+      
         function get_age() {   
-            return $this->age;
+          return $this->age;
         }
-
+      
         function get_name() {   
-            return $this->name;
-        }
-
-        function set_color($color)  
+          return $this->name;
+        }  
+      
+        // setter methods
+        function set_color(string $color)  
         { 
-            $this->color = (string)$color; 
+          $this->color = $color; 
         }
-
-        function set_age($age)   
+      
+        function set_age(int $age) 
         {    
-            $this->age = (int)$age;
+          $this->age = $age;
         }
-
-        function set_name($name) 
+      
+        function set_name(string $name) 
         {    
-          $this->name = (int)$name;
+          $this->name = $name;
         }
-
+      
+        // more mammal functions
         function eat() 
         {
-            echo 'Yum yum :o)'; 
+          echo 'Yum :o)'; 
         }
-
+      
         function sleep()
         {
-            echo 'I\'m sleeping'; 
+          echo 'I\'m sleeping'; 
         }
     }
 
@@ -105,7 +119,22 @@
     
     }
 
-//            require_once('Fruit.php');
+//require_once('Fruit.php');
+/*
+$banana = new Fruit('Banana', 'Yellow');
+
+echo '<pre>'; 
+var_dump($banana); 
+exit(); 
+
+
+//$banana->set_name('Banana'); 
+//$banana->set_color('Yellow'); 
+
+$apple = new Fruit();
+$apple->set_name('Apple'); 
+
+
 
 
     $fruit = new Fruit('green', 'Apple');
@@ -126,12 +155,78 @@
 
     var_dump($fruit);
 
+    $mammal = new Mammal('white',3, 'Unicorn');         
 
-    $mammal = new Mammal('red',3); 
-    var_dump($mammal);
+*/
+/*
+    $fruit = new Fruit('yellow', 'Banana'); 
+    echo $fruit->get_name(); 
+    $fruit->set_name('Gurke'); 
+    echo '<pre>'; 
+    var_dump($fruit); 
+    exit(); 
+    */
+    //$fruit = new Fruit('yellow', 'Banana'); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    echo '<pre/>';
+    //$mammal = new Mammal('red',3); 
+    //var_dump($mammal);
+//    exit(); 
+
+  //  $mammal->bark(); 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     $dog = new Dog('brown', 7, 'Dog'); 
     var_dump($dog);
+    $dog->bark(); 
+    $dog->eat(); 
+    //exit(); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //$mammal->bark(); 
+    ///$dog->bark(); 
+
+    exit(); 
 
 
     echo '<br>';
